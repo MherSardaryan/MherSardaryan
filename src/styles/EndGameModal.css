@@ -1,0 +1,115 @@
+.end-game-modal {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background: var(--card-background);
+  border-radius: 1.5rem;
+}
+
+.end-game-modal h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game-summary {
+  background: var(--background-color);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.cost-details {
+  padding: 1.5rem;
+  background: var(--card-background);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.cost-row:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.total-amount {
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 1rem;
+}
+
+.total-amount-inner {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-amount h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.total-cost {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background: var(--background-color);
+  color: var(--text-primary);
+}
+
+.confirm-btn {
+  background: linear-gradient(135deg, var(--success-color), #059669);
+  color: white;
+}
+
+.modal-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .end-game-modal {
+    padding: 1.5rem;
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+  
+  .cost-row {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  .total-cost {
+    font-size: 1.5rem;
+  }
+} 

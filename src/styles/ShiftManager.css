@@ -1,0 +1,164 @@
+.shift-manager {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px var(--shadow-color);
+}
+
+.start-shift {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.worker-select {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.worker-select select {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+}
+
+/* Модальное окно добавления работника */
+.add-worker-modal {
+  background: var(--card-background);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-worker-modal h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.add-worker-modal input {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  background: var(--background-color);
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.add-worker-modal input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  transform: translateY(-1px);
+}
+
+.add-worker-modal .modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.add-worker-modal .modal-actions button {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.add-worker-modal .modal-actions button:first-child {
+  background: var(--background-color);
+  color: var(--text-primary);
+}
+
+.add-worker-modal .modal-actions button:last-child {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.add-worker-modal .modal-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для текущей смены */
+.current-shift {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.shift-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.worker-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--primary-color);
+}
+
+.shift-time {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.start-shift-btn,
+.end-shift-btn {
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.start-shift-btn {
+  background: linear-gradient(135deg, var(--success-color), #059669);
+  color: white;
+}
+
+.end-shift-btn {
+  background: linear-gradient(135deg, var(--danger-color), #dc2626);
+  color: white;
+}
+
+.start-shift-btn:hover,
+.end-shift-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .worker-select {
+    flex-direction: column;
+  }
+
+  .worker-select select,
+  .worker-select button {
+    width: 100%;
+  }
+
+  .add-worker-modal {
+    padding: 1.5rem;
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+} 
